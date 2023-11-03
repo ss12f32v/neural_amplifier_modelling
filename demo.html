@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>NEURAL AMPLIFIER MODELLING WITH SEVERAL GAN VARIANTS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <table border="0">
+                <tr>
+                    <td>
+                        <h1>NEURAL AMPLIFIER MODELLING WITH SEVERAL GAN VARIANTS</h1>
+                    </td>
+                </tr>
+            </table>
+
+        </header>
+
+
+
+        <div class="visible" id="area2">
+
+
+         
+
+         <!-- <p>
+            We demonstrate one audio sample for each amplifier on different setting.
+            <ul>
+            <li> <b> Input </b> is a clean audio extract from EGDB test-set.
+               </li>
+            <li> <b> Target </b> is the corresponding amplifier rendered audio extract from EGDB test-set.
+               </li>
+            <li> <b> Baseline </b> is the audio generated from the model we trained on the baseline method.
+            <li> <b> MPD+MSD </b> is the audio generated from our model with replaced discriminator: MPD+MSD.</li>
+          
+            </ul>
+         </p> -->
+
+
+<br><br>
+<h2>On EGDB dataset</h2>
+<br>
+<p>
+   We demonstrate one audio sample for each amplifier on different setting.
+   <ul>
+   <li> <b> Input </b> is a clean audio extract from EGDB test-set.
+      </li>
+   <li> <b> Target </b> is the corresponding amplifier rendered audio extract from EGDB test-set.
+      </li>
+   <li> <b> Baseline </b> is the audio generated from the model we trained on the baseline method.
+   <li> <b> MPD+MSD </b> is the audio generated from our model with replaced discriminator: MPD+MSD.</li>
+ 
+   </ul>
+</p>
+<table class ="audiotable" border="0" width="100%"><tr class="highlight">
+<tr class="highlight">
+<td class="secondary">
+</td>
+
+<td class="audio">
+<h3>Input</h3>
+</td>
+
+<td class="audio">
+<h3>Ground Truth</h3>
+</td>
+
+<td class="audio">
+<h3>Baseline</h3>
+</td>
+
+<td class="audio">
+<h3>MPD+MSD</h3>
+</td>
+
+
+<!-- Mesa -->
+</tr><tr class="odd">
+<td class="secondary">
+   Mesa
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Mesa_input_0.wav" type="audio/wav">
+   </audio>
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Mesa_target_0.wav" type="audio/wav">
+   </audio>
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Mesa_baseline_0.wav" type="audio/wav">
+   </audio>
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Mesa_output_0.wav" type="audio/wav">
+   </audio>
+</td>
+</tr>
+
+<!-- Fender -->
+<tr class="odd">
+<td class="secondary">
+   Fender
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Fender_input_1.wav" type="audio/wav">
+   </audio>
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Fender_target_1.wav" type="audio/wav">
+   </audio>
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Fender_baseline_1.wav" type="audio/wav">
+   </audio>
+</td>
+
+<td class="audio">
+   <audio controls preload="none">
+      <source src="audio/Fender_output_1.wav" type="audio/wav">
+   </audio>
+</td>
+
+<!-- Marshall -->
+<tr class="odd">
+   <td class="secondary">
+      Marshall
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/Marshall_input_1.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/Marshall_target_1.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/Marshall_baseline_1.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/Marshall_output_1.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+
+
+</tr>
+</table>
+
+
+<!-- exp2 -->
+<br><br>
+<h2>Application to Unseen Data</h2>
+<br>
+
+<p>
+  We demonstrate that our model possesses the capability to render data from other guitar dataset. We use the <b>Mesa</b> model to render audio in this Experiment.
+   <ul>
+   <li> <b> Input </b> is the audio extract from Guitarset in "mic" setting.
+   <li> <b> MPD+MSD </b> is the audio generated from our model with replaced discriminator: MPD+MSD.
+      </li>
+   </ul>
+</p>
+
+<table class ="audiotable" border="0" width="100%"><tr class="highlight">
+<tr class="highlight">
+<td class="secondary">
+</td>
+
+<td class="audio">
+<h3>Input</h3>
+</td>
+
+<td class="audio">
+<h3>MPD+MSD</h3>
+</td>
+</tr><tr class="odd">
+   <td class="secondary">
+      Example 1
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/orginal_guitarset1.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/mesa_on_guitarset1.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+   
+   </tr>
+
+</tr><tr class="odd">
+   <td class="secondary">
+      Example 2
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/orginal_guitarset2.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+   <td class="audio">
+      <audio controls preload="none">
+         <source src="audio/mesa_on_guitarset2.wav" type="audio/wav">
+      </audio>
+   </td>
+   
+   
+   </tr>
+
+
+
+
+         <br><br>
+            
+         </div>
+
+        <footer class="footer">
+            <p><i></i></p>
+        </footer>
+    </div>
+</body>
+
+</html>
